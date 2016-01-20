@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script src="http://js.salesup-crm.com/channels/js/channels.js" defer></script>
+
+
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-69021575-1', 'auto');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
+
+		/* Accurate bounce rate by time */
+		if (!document.referrer ||
+			document.referrer.split('/')[2].indexOf(location.hostname) != 0)
+			setTimeout(function () {
+				ga('send', 'event', 'Новый посетитель', location.pathname);
+			}, 15000);
+	</script>
+</head>
+
+<body>
+	<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" onsubmit="set_channel_id();return true;">
+		<!-- ФИО -->
+		name:
+		<input type="text" name="name" />
+		<br/>
+		<!-- Поле Email (обязательно) -->
+		email:
+		<input type="text" name="email" />
+		<br/> phone_invalid:
+		<input type="tel" name="custom_phone_invalid" value="" />
+		<br/>
+
+		<!-- Партнёрские данные -->
+		<input type="hidden" name="custom_partner_id" value="">
+		<input type="hidden" name="custom_link_id" value="">
+		<input type="hidden" name="custom_chanel_subscribe" value="">
+
+		<!-- Данные заказа (только для ЦРМ) -->
+		<input type="hidden" name="comment" value="арбитраж" />
+		<input type="hidden" name="referrer" value="" />
+		<input type="hidden" name="order_url" value="" />
+		<input type="hidden" name="transaction_id" value="0" />
+		<input type="hidden" name="partner_id" value="0" />
+		<input type="hidden" name="link_id" value="0" />
+		<input type="hidden" name="product_id" value="716" />
+		<input type="hidden" name="result_url" value="https://my.webinar.ru/event/668251/?t=15307" />
+
+		<!-- Токен кампании -->
+		<!-- Получить токен на: https://app.getresponse.com/campaign_list.html -->
+		<input type="hidden" name="campaign_token" value="pakZc" />
+		<!-- Страница благодарности (по желанию) -->
+		<input type="hidden" name="thankyou_url" value="https://crm.botsmansergey.pp.ua/post-order/post.php" />
+		<!-- Переадресация данных формы на вашу страницу (по желанию) -->
+		<input type="hidden" name="forward_data" value="post" />
+
+		<!-- Кнопка подписаться -->
+		<input type="submit" value="Subscribe" />
+	</form>
+
+
+
+	<!-- ----------------------------------------------------------------- -->
+	<hr>
+	<!-- ----------------------------------------------------------------- -->
+
+
+
+	<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" onsubmit="set_channel_id();return true;">
+		<!-- ФИО -->
+		name:
+		<input type="text" name="name" />
+		<br/>
+		<!-- Поле Email (обязательно) -->
+		email:
+		<input type="text" name="email" />
+		<br/> phone_invalid:
+		<input type="tel" name="custom_phone_invalid" value="" />
+		<br/>
+
+		<!-- Партнёрские данные -->
+		<input type="hidden" name="custom_partner_id" value="">
+		<input type="hidden" name="custom_link_id" value="">
+		<input type="hidden" name="custom_chanel_subscribe" value="">
+
+		<!-- Токен кампании -->
+		<!-- Получить токен на: https://app.getresponse.com/campaign_list.html -->
+		<input type="hidden" name="campaign_token" value="pakZc" />
+		<!-- Страница благодарности (по желанию) -->
+		<input type="hidden" name="thankyou_url" value="" />
+		
+		<!-- Кнопка подписаться -->
+		<input type="submit" value="Subscribe" />
+	</form>
+
+
+	<!-- ----------------------------------------------------------------- -->
+
+
+	<img id="set_channel" style="display:none" src="" />
+	<img id="set_cookie" style="display:none" src="" />
+</body>
+
+</html>
